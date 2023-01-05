@@ -90,6 +90,10 @@
     &:hover {
       color: $acc-clr-1;
     }
+
+    &:first-of-type {
+      font-size: 1.7rem;
+    }
   }
 }
 
