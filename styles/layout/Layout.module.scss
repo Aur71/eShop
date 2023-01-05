@@ -1,1 +1,7 @@
 @import '../variables.scss';
+
+.layout {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  height: auto;
+}
