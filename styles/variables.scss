@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-$main-clr: rgb(247, 255, 254);
+$main-clr: #f2f2f7;
+$acc-clr: #0082e6;
 $secondary-clr: #334b49;
 $acc-clr-1: #7cb6b0;
-$acc-clr-2: #dfc11c;
+$acc-clr-2: blue;
 $sidebar-clr: rgb(20, 20, 20);
 $white: rgb(230, 230, 230);
 $black: rgb(20, 20, 20);
 $font-1: 'Montserrat', sans-serif;
+
+// NAVBAR
+$navbar-bk: white;
+$nav-text: black;

@@ -25,19 +25,23 @@ const Sidebar = () => {
 
       <ul className={styles.links}>
         <li>
-          <Link href='/'>Home</Link>
+          <Link href='/'>home</Link>
         </li>
 
         <li>
-          <Link href='/about'>About</Link>
+          <Link href='/about'>about</Link>
         </li>
 
         <li>
-          <Link href='/contact'>Contact</Link>
+          <Link href='/contact'>contact</Link>
         </li>
 
         <li>
-          <Link href='/cart'>Cart</Link>
+          <Link href='/cart'>support</Link>
+        </li>
+
+        <li>
+          <Link href='/cart'>faq</Link>
         </li>
       </ul>
 

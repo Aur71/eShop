@@ -1,48 +1,14 @@
-import styles from '../styles/layout/Navbar.module.scss';
+import styles from '../styles/layout/navbar/Navbar.module.scss';
 
-// TOOLS
-import Link from 'next/link';
-
-// MEDIA
-import { MdAccountCircle, MdShoppingCart } from 'react-icons/md';
-import { GiHamburgerMenu } from 'react-icons/gi';
+//  COMPONENTS
+import NavItems from '../components/navbar/NavItems';
+import NavLinks from '../components/navbar/NavLinks';
 
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <ul>
-        <li>
-          <Link href='/'>
-            e<span>Shop</span>.
-          </Link>
-        </li>
-
-        <li>
-          <Link href='/contact'>contact</Link>
-        </li>
-
-        <li>
-          <Link href='/about'>about</Link>
-        </li>
-
-        <li>
-          <Link href='/'>
-            <MdAccountCircle />
-          </Link>
-        </li>
-
-        <li>
-          <Link href='/cart'>
-            <MdShoppingCart />
-          </Link>
-        </li>
-
-        <li>
-          <button>
-            <GiHamburgerMenu />
-          </button>
-        </li>
-      </ul>
+      <NavItems />
+      <NavLinks />
     </nav>
   );
 };

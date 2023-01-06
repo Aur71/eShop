@@ -1,0 +1,50 @@
+@import '../../variables.scss';
+
+.navLinks {
+  background: #0082e6;
+  background: -webkit-linear-gradient(
+    left,
+    #ff1d25 5%,
+    #a0328c 35%,
+    #7040a4 45%,
+    #4359c7 55%,
+    #0082e6 70%
+  );
+  background: linear-gradient(
+    to right,
+    #ff1d25 5%,
+    #a0328c 35%,
+    #7040a4 45%,
+    #4359c7 55%,
+    #0082e6 70%
+  );
+
+  @media only screen and (max-width: 450px) {
+    display: none;
+  }
+
+  .center {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.7rem 0.5rem;
+    display: flex;
+    gap: 1rem;
+
+    li:last-of-type {
+      margin-left: auto;
+    }
+
+    li a {
+      color: $white;
+      text-transform: capitalize;
+      font-size: 0.9rem;
+      padding: 0.5rem;
+      transition: color 300ms;
+
+      &:hover {
+        color: $acc-clr-1;
+      }
+    }
+  }
+}
