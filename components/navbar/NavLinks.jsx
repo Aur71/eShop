@@ -1,14 +1,24 @@
 import styles from '../../styles/layout/navbar/NavLinks.module.scss';
 
+// HOOKS
+import { useRouter } from 'next/router';
+
 // TOOLS
 import Link from 'next/link';
 
 const NavLinks = () => {
+  const router = useRouter();
+
   return (
     <div className={styles.navLinks}>
       <ul className={styles.center}>
         <li>
-          <Link href='#'>products</Link>
+          <Link
+            href='#'
+            className={`${router.pathname === '/' && styles.active}`}
+          >
+            products
+          </Link>
         </li>
 
         <li>
