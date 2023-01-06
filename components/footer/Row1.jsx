@@ -2,12 +2,16 @@ import styles from '../../styles/layout/Footer.module.scss';
 
 // TOOLS
 import Link from 'next/link';
+import Image from 'next/image';
+
+// MEDIA
+import logo from '../../public/logo.png';
 
 const Row1 = () => {
   return (
     <section className={styles.row1}>
       <Link href='/' className={styles.logo}>
-        e<span>Shop</span>.
+        <Image src={logo} alt='logo' />
       </Link>
 
       <ul>

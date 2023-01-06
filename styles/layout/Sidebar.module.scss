@@ -6,73 +6,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: $sidebar-clr;
-  color: $white;
-  z-index: 999;
-  transition: 500ms;
+  background-color: $white;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-
-  transform: translateX(100%);
-
-  &.active {
-    box-shadow: 0 0 5px black;
-    transform: translateX(0%);
-  }
-
-  @media only screen and (max-width: 300px) {
-    width: 100%;
-  }
-
-  .header {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-
-    a {
-      color: $white;
-      font-size: 1.5rem;
-      font-weight: 500;
-
-      span {
-        color: $acc-clr-2;
-      }
-    }
-
-    button {
-      font-size: 2rem;
-      color: white;
-    }
-  }
-
-  ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    li a {
-      display: block;
-      text-transform: uppercase;
-      font-size: 1.2rem;
-      color: $white;
-      padding: 1rem;
-    }
-  }
-
-  .accountIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    font-size: 4rem;
-    color: $white;
-  }
+  display: none;
 }

@@ -2,8 +2,8 @@
 
 .footer {
   width: 100%;
-  background-color: $secondary-clr;
-  color: $white;
+  background-color: $white;
+  color: $text-clr-black;
   padding: 3rem 1rem;
 
   .center {
@@ -17,8 +17,25 @@
   .line {
     width: 100%;
     height: 2px;
-    background-color: aliceblue;
     margin: 2rem 0;
+
+    background: #0082e6;
+    background: -webkit-linear-gradient(
+      left,
+      #ff1d25 5%,
+      #a0328c 35%,
+      #7040a4 45%,
+      #4359c7 55%,
+      #0082e6 70%
+    );
+    background: linear-gradient(
+      to right,
+      #ff1d25 5%,
+      #a0328c 35%,
+      #7040a4 45%,
+      #4359c7 55%,
+      #0082e6 70%
+    );
   }
 }
 
@@ -35,16 +52,11 @@
   }
 
   .logo {
-    color: $white;
-    transition: color 300ms;
-    font-size: 2rem;
+    width: max-content;
 
-    span {
-      color: $acc-clr-2;
-    }
-
-    &:hover {
-      color: $acc-clr-2;
+    img {
+      width: 150px;
+      height: auto;
     }
 
     @media only screen and (max-width: 600px) {
@@ -57,16 +69,12 @@
     flex-direction: column;
 
     li a {
-      color: $white;
+      color: $text-clr-black;
       font-size: 0.9rem;
       transition: color 300ms;
       text-transform: uppercase;
       padding: 0.3rem;
       display: block;
-
-      &:hover {
-        color: $acc-clr-1;
-      }
     }
   }
 }
@@ -84,12 +92,8 @@
     display: flex;
     font-size: 2rem;
     padding: 1rem;
-    color: $white;
+    color: $text-clr-black;
     transition: color 300ms;
-
-    &:hover {
-      color: $acc-clr-1;
-    }
 
     &:first-of-type {
       font-size: 1.7rem;

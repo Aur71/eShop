@@ -27,7 +27,7 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0.7rem 0.5rem;
+    padding: 1rem 0.5rem;
     display: flex;
     gap: 1rem;
 
@@ -36,14 +36,16 @@
     }
 
     li a {
-      color: $white;
+      color: $text-clr-white;
       text-transform: capitalize;
       font-size: 0.9rem;
       padding: 0.5rem;
       transition: color 300ms;
+      border: 1px solid transparent;
+      border-radius: 20px;
 
       &:hover {
-        color: $acc-clr-1;
+        border: 1px solid $text-clr-white;
       }
     }
   }

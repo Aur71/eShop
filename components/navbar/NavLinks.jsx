@@ -8,23 +8,19 @@ const NavLinks = () => {
     <div className={styles.navLinks}>
       <ul className={styles.center}>
         <li>
-          <Link href='/'>home</Link>
+          <Link href='#'>products</Link>
         </li>
 
         <li>
-          <Link href='/'>about</Link>
+          <Link href='/contact'>contact</Link>
         </li>
 
         <li>
-          <Link href='/'>contact</Link>
+          <Link href='#'>faq</Link>
         </li>
 
         <li>
-          <Link href='/'>support</Link>
-        </li>
-
-        <li>
-          <Link href='/'>faq</Link>
+          <Link href='#'>support</Link>
         </li>
       </ul>
     </div>

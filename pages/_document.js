@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head />
-      <title>eShop</title>
+      <title>GMAG</title>
       <body>
         <Main />
         <NextScript />
