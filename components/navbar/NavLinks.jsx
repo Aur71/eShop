@@ -1,15 +1,23 @@
 import styles from '../../styles/layout/navbar/NavLinks.module.scss';
+// HOOKS
+import { useGlobalContext } from '../../context/context';
 
 // TOOLS
 import Link from 'next/link';
 
 const NavLinks = () => {
+  const { showMenu, handleMenu } = useGlobalContext();
+
   return (
     <div className={styles.navLinks}>
       <ul className={styles.center}>
         <li>
-          {/* NEED TO ADD ACTIVE STYLE */}
-          <button>products</button>
+          <button
+            className={`${showMenu && styles.active}`}
+            onClick={handleMenu}
+          >
+            products
+          </button>
         </li>
 
         <li>

@@ -27,6 +27,14 @@ const Header = () => {
     return num;
   };
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setActiveIndex(checkNum(activeIndex + 1));
+    }, 10000);
+
+    return () => clearTimeout(timeout);
+  }, [activeIndex]);
+
   return (
     <section className={styles.header}>
       <div className={styles.center}>
