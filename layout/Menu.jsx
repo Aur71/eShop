@@ -9,7 +9,13 @@ import MegaMenu from '../components/menu/MegaMenu';
 import { menuData } from '../data/menuData';
 
 const Menu = () => {
-  const { showMenu, showMegaMenu, setShowMegaMenu } = useGlobalContext();
+  const { showMenu, showMegaMenu, setShowMegaMenu, setMegaMenuItems } =
+    useGlobalContext();
+
+  const handleMegaMenu = (items, e) => {
+    setMegaMenuItems(items);
+    setShowMegaMenu(true);
+  };
 
   return (
     <div
@@ -23,7 +29,10 @@ const Menu = () => {
           <ul>
             {menuData.map((item) => {
               return (
-                <li key={item.id} onMouseOver={() => setShowMegaMenu(true)}>
+                <li
+                  key={item.id}
+                  onMouseOver={(e) => handleMegaMenu(item.items, e)}
+                >
                   <span>{item.icon}</span>
                   <span>{item.name}</span>
                 </li>

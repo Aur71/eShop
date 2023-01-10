@@ -6,10 +6,11 @@ import { useRouter } from 'next/router';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const route = useRouter();
   const [showMenu, setShowMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(null);
-  const route = useRouter();
   const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [megaMenuItems, setMegaMenuItems] = useState([]);
 
   //   SETTING THE SCREEN WIDTH
   useEffect(() => {
@@ -51,6 +52,8 @@ const AppProvider = ({ children }) => {
         handleMenu,
         showMegaMenu,
         setShowMegaMenu,
+        megaMenuItems,
+        setMegaMenuItems,
       }}
     >
       {children}

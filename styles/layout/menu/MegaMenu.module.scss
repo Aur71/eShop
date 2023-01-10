@@ -6,8 +6,53 @@
   transition: opacity 300ms;
   background-color: $white;
   opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1rem 2rem;
+  gap: 2rem;
 
   &.active {
     opacity: 1;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: $acc-clr $black; /* scroll thumb and track */
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $black;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $acc-clr;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h5 {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: $black;
+      display: block;
+    }
+
+    li a {
+      font-size: 0.9rem;
+      color: $text-clr-black;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+        color: $acc-clr;
+      }
+    }
   }
 }
