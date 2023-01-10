@@ -1,0 +1,60 @@
+@import '../../variables.scss';
+
+$pagination-btn-color: rgb(53, 53, 53);
+
+.section {
+  width: 100%;
+  height: auto;
+  margin: 4rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1450px) {
+    max-width: 1100px;
+    margin: 3rem auto;
+  }
+
+  @media only screen and (max-width: 1450px) {
+    padding: 0 1rem;
+  }
+
+  //   TITLE
+  .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $text-clr-black;
+  }
+
+  //   PAGINATION
+  .pagination {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+
+    @media only screen and (max-width: 750px) {
+      display: none;
+    }
+
+    button {
+      width: 15px;
+      height: 15px;
+      background-color: $pagination-btn-color;
+      border-radius: 50%;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &.active {
+        background-color: $acc-clr;
+      }
+    }
+  }
+}
