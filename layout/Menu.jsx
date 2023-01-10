@@ -17,12 +17,17 @@ const Menu = () => {
     setShowMegaMenu(true);
   };
 
+  const handleMouseLeave = () => {
+    setShowMegaMenu(false);
+    setMegaMenuItems([]);
+  };
+
   return (
     <div
       className={`${styles.menu} ${showMenu && styles.active} ${
         showMegaMenu && styles.acitveMegaMenu
       }`}
-      onMouseLeave={() => setShowMegaMenu(false)}
+      onMouseLeave={handleMouseLeave}
     >
       <div className={styles.center}>
         <aside className={styles.sidebar}>
