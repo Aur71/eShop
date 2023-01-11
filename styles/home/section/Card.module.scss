@@ -6,6 +6,7 @@ $star-clr: orange;
 $price-clr: rgb(218, 13, 13);
 
 .card {
+  flex: none;
   min-width: 267px;
   max-width: 267px;
   height: 100%;
@@ -15,6 +16,16 @@ $price-clr: rgb(218, 13, 13);
   display: grid;
   grid-template-rows: 245px 1fr;
   gap: 0.5rem;
+
+  @media only screen and (max-width: 500px) {
+    min-width: 250px;
+    max-width: 250px;
+  }
+
+  @media only screen and (max-width: 300px) {
+    min-width: 240px;
+    max-width: 240px;
+  }
 
   .favoriteBtn {
     position: absolute;
