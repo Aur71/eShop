@@ -22,7 +22,7 @@ const Card = () => {
       </button>
 
       <div className={styles.imgContainer}>
-        <Link href='#'>
+        <Link href='/product/id'>
           <Image src={img2} alt='img' />
 
           <p className={styles.tag}>Top Favorites</p>
@@ -31,7 +31,7 @@ const Card = () => {
 
       <div className={styles.textContainer}>
         <h3>
-          <Link href='#'>
+          <Link href='/product/id'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
             vitae hic delectus dolor sit laudantium vero neque velit
             necessitatibus molestias.

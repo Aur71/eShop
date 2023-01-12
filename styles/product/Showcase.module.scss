@@ -1,0 +1,8 @@
+@import '../variables.scss';
+
+.showcase {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  margin-top: 1rem;
+}
