@@ -2,5 +2,109 @@
 
 .actions {
   width: 100%;
-  border: 1px solid red;
+
+  @media only screen and (max-width: 1000px) {
+    grid-area: b;
+  }
+
+  .center {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+
+    @media only screen and (max-width: 1000px) {
+      width: 350px;
+    }
+
+    @media only screen and (max-width: 800px) {
+      width: auto;
+    }
+
+    @media only screen and (max-width: 750px) {
+      box-shadow: none;
+      padding: 1rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+      padding: 0;
+    }
+
+    .prp {
+      color: grey;
+      font-size: 0.8rem;
+    }
+
+    .price {
+      color: $acc-clr-2;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .delivery {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .stock {
+      font-size: 0.9rem;
+    }
+
+    .cartBtn {
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: auto 1fr;
+      place-items: center;
+      color: $text-clr-white;
+      border-radius: 5px;
+      margin: 0.5rem 0;
+      overflow: hidden;
+
+      background: #3985e0;
+      background: -webkit-linear-gradient(left, #4a60c1 10%, #3985e0);
+      background: linear-gradient(to right, #4a60c1 10%, #3985e0);
+      font-size: 1.3rem;
+      transition: box-shadow 300ms;
+
+      &:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+
+      span:first-of-type {
+        display: flex;
+        font-size: 1.5rem;
+        background-color: $acc-clr-2;
+        padding: 0.7rem;
+        border-bottom-right-radius: 50%;
+      }
+    }
+
+    .favoriteBtn {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      place-items: center;
+      color: $acc-clr;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: transparent;
+      border: 1px solid $acc-clr;
+      font-size: 1.2rem;
+      transition: 300ms;
+
+      &:hover {
+        background: $acc-clr;
+        color: $text-clr-white;
+      }
+
+      span:first-of-type {
+        display: flex;
+        font-size: 1.5rem;
+        padding: 0.7rem;
+      }
+    }
+  }
 }

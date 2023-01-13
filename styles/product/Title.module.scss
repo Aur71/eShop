@@ -5,60 +5,27 @@ $star-clr: orange;
 
 .header {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 150px;
-  gap: 1rem;
+  height: auto;
 
   @media only screen and (max-width: 750px) {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+    padding: 0 2rem;
   }
 
-  .titleContainer {
-    width: 100%;
-    height: auto;
-
-    p {
-      font-size: 0.8rem;
-      color: $product-id-clr;
-    }
-
-    h1 {
-      font-size: 1.3rem;
-      font-weight: 500;
-
-      @media only screen and (max-width: 850px) {
-        font-size: 1rem;
-      }
-    }
+  @media only screen and (max-width: 350px) {
+    padding: 0;
   }
 
-  .reviewsContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+  p {
+    font-size: 0.8rem;
+    color: $product-id-clr;
+  }
 
-    p {
-      font-size: 0.8rem;
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 500;
 
-      span {
-        color: $acc-clr;
-      }
-    }
-
-    .reviews {
-      width: 100%;
-      display: flex;
-      align-items: center;
-
-      span {
-        color: $star-clr;
-      }
-
-      p {
-        margin-left: 0.3rem;
-      }
+    @media only screen and (max-width: 850px) {
+      font-size: 1rem;
     }
   }
 }
