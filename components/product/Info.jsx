@@ -38,7 +38,7 @@ const Info = () => {
           <span>
             <IoMdCheckmark />
           </span>
-          <span>fast delivery (7d max)</span>
+          <span>Fast delivery (7d max)</span>
         </li>
 
         <li>
