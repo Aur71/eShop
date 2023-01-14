@@ -5,23 +5,15 @@ import Title from '../../components/product/Title';
 import Showcase from '../../components/product/showcase/Showcase';
 import Navigation from '../../components/product/Navigation';
 import Description from '../../components/product/Description';
-import Specifications from '../../components/product/Specifications';
 
 const Product = () => {
   return (
     <div className={styles.product}>
       <Title />
       <Showcase />
-      {/* 
       <Navigation />
 
-      <section>
-        <Description />
-      </section>
-
-      <section>
-        <Specifications />
-      </section> */}
+      <Description />
     </div>
   );
 };
