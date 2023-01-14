@@ -1,6 +1,6 @@
 import styles from '../../../styles/home/section/Slider.module.scss';
 // HOOKS
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useDraggable } from 'react-use-draggable-scroll';
 
 // COMPONENTS

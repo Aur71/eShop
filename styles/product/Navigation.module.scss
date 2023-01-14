@@ -1,0 +1,45 @@
+@import '../variables.scss';
+
+.navigation {
+  width: 100%;
+  height: auto;
+  background-color: $acc-clr;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
+
+  ul {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0.3rem 1rem;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media only screen and (max-width: 1450px) {
+      max-width: 1100px;
+    }
+  }
+
+  li button {
+    padding: 0.7rem 0.6rem;
+    border-radius: 5px;
+    color: $text-clr-white;
+    font-family: $font-1;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    &.active {
+      background-color: $white;
+      color: $text-clr-black;
+    }
+  }
+}

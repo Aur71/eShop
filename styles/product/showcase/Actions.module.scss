@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import '../../variables.scss';
 
 .actions {
   width: 100%;
@@ -20,9 +20,6 @@
 
     @media only screen and (max-width: 800px) {
       width: auto;
-    }
-
-    @media only screen and (max-width: 750px) {
       box-shadow: none;
       padding: 1rem;
     }

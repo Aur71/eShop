@@ -1,4 +1,4 @@
-import styles from '../../styles/product/Info.module.scss';
+import styles from '../../../styles/product/showcase/Info.module.scss';
 
 // MEDIA
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';

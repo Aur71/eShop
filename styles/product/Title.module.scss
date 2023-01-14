@@ -3,29 +3,33 @@
 $product-id-clr: grey;
 $star-clr: orange;
 
-.header {
+.title {
   width: 100%;
   height: auto;
+  background-color: $white;
 
-  @media only screen and (max-width: 750px) {
-    padding: 0 2rem;
-  }
+  .center {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0.5rem;
 
-  @media only screen and (max-width: 350px) {
-    padding: 0;
-  }
+    @media only screen and (max-width: 1450px) {
+      max-width: 1100px;
+    }
 
-  p {
-    font-size: 0.8rem;
-    color: $product-id-clr;
-  }
+    p {
+      font-size: 0.8rem;
+      color: $product-id-clr;
+    }
 
-  h1 {
-    font-size: 1.3rem;
-    font-weight: 500;
+    h1 {
+      font-size: 1.3rem;
+      font-weight: 500;
 
-    @media only screen and (max-width: 850px) {
-      font-size: 1rem;
+      @media only screen and (max-width: 850px) {
+        font-size: 1rem;
+      }
     }
   }
 }

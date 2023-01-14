@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 
 // TOOLS
 import Link from 'next/link';
-import Image from 'next/image';
 
 // MEDIA
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';

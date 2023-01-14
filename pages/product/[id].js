@@ -2,17 +2,26 @@ import styles from '../../styles/product/Product.module.scss';
 
 // COMPONENTS
 import Title from '../../components/product/Title';
-import Showcase from '../../components/product/Showcase';
+import Showcase from '../../components/product/showcase/Showcase';
+import Navigation from '../../components/product/Navigation';
+import Description from '../../components/product/Description';
+import Specifications from '../../components/product/Specifications';
 
 const Product = () => {
   return (
     <div className={styles.product}>
+      <Title />
+      <Showcase />
+      {/* 
+      <Navigation />
+
       <section>
-        <div className={styles.center}>
-          <Title />
-          <Showcase />
-        </div>
+        <Description />
       </section>
+
+      <section>
+        <Specifications />
+      </section> */}
     </div>
   );
 };

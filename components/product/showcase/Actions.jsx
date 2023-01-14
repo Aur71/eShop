@@ -1,4 +1,4 @@
-import styles from '../../styles/product/Actions.module.scss';
+import styles from '../../../styles/product/showcase/Actions.module.scss';
 
 import { BsFillCartFill, BsHeart } from 'react-icons/bs';
 
