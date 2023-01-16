@@ -1,6 +1,6 @@
 import styles from '../../styles/product/Description.module.scss';
 // HOOKS
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 // TOOLS
 import Image from 'next/image';
@@ -12,6 +12,21 @@ const Description = () => {
   const [showMore, setShowMore] = useState(false);
   const descRef = useRef(null);
   const centerRef = useRef(null);
+  const showBtnRef = useRef(null);
+  const overlayRef = useRef(null);
+
+  useEffect(() => {
+    const height = centerRef.current.getBoundingClientRect().height;
+
+    if (height < 500) {
+      descRef.current.style.height = `${height}px`;
+      centerRef.current.style.paddingBottom = `${2}rem`;
+      showBtnRef.current.style.display = 'none';
+      overlayRef.current.style.display = 'none';
+    }
+
+    // NEED TO ADD A DEPENDENCY WHEN THE DESCRIPTION CHANGES
+  }, [descRef, centerRef]);
 
   const handleDesc = () => {
     setShowMore(!showMore);
@@ -31,9 +46,10 @@ const Description = () => {
     >
       <div
         className={`${styles.overlay}  ${showMore && styles.inactive}`}
+        ref={overlayRef}
       ></div>
 
-      <button className={styles.showBtn} onClick={handleDesc}>
+      <button className={styles.showBtn} onClick={handleDesc} ref={showBtnRef}>
         {showMore ? 'show less' : 'show more'}
       </button>
 
@@ -43,7 +59,7 @@ const Description = () => {
           quibusdam.
         </h1>
 
-        <Image src={img} alt='temp img' />
+        <Image src={img} alt='img' />
 
         <h2>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo,
@@ -66,34 +82,19 @@ const Description = () => {
         </h5>
 
         <h6>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam,
-          aspernatur!
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime,
+          distinctio!
         </h6>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-          ipsam quas, blanditiis corporis saepe error repellendus accusantium
-          expedita suscipit laudantium eius quia. Laudantium vero neque officiis
-          unde! Vero, ullam eaque.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
+          reprehenderit nam dolore voluptatum sed perferendis nobis cumque,
+          alias reiciendis quaerat tempora dolorem dolor non repudiandae
+          doloribus, consequatur minus quos sint? Ullam quidem corrupti cum
+          quisquam ex ipsum magnam alias consequatur. Sequi ducimus facere
+          cupiditate ipsa temporibus, unde soluta expedita tempore eos aliquid
+          distinctio, itaque inventore culpa quis numquam illo?
         </p>
-
-        <ul>
-          <p>List title</p>
-          <li>list item 1</li>
-          <li>list item 1</li>
-          <li>list item 1</li>
-          <li>list item 1</li>
-          <li>list item 1</li>
-        </ul>
-
-        <ol>
-          <p>List title</p>
-          <li>list item 1</li>
-          <li>list item 1</li>
-          <li>list item 1</li>
-          <li>list item 1</li>
-          <li>list item 1</li>
-        </ol>
 
         <a href='#'>Link</a>
       </div>
