@@ -1,0 +1,255 @@
+@import '../../variables.scss';
+
+$border-clr: rgb(207, 207, 207);
+
+.gridContainer {
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px solid $border-clr;
+  display: grid;
+  grid-template-columns: auto 1.5fr 1fr 1fr 1fr;
+  padding: 1.5rem;
+
+  @media only screen and (max-width: 1450px) {
+    padding: 1.5rem 0;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: 1fr 1fr 1fr auto;
+  }
+
+  @media only screen and (max-width: 950px) {
+    grid-template-columns: none;
+    grid-template-areas:
+      'a b'
+      'c d ';
+    gap: 2rem 1rem;
+  }
+
+  @media only screen and (max-width: 650px) {
+    gap: 2rem 0;
+  }
+
+  @media only screen and (max-width: 500px) {
+    grid-template-areas:
+      'a'
+      'b'
+      'c'
+      'd';
+  }
+
+  .gridItem {
+    width: 100%;
+    border-right: 1px solid $border-clr;
+
+    &:last-of-type {
+      border-right: none;
+    }
+
+    &:first-of-type {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+
+      @media only screen and (max-width: 950px) {
+        grid-area: a;
+      }
+
+      @media only screen and (max-width: 1100px) {
+        border-right: 1px solid $border-clr;
+      }
+
+      h3 {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+
+      p:first-of-type {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $star-clr;
+        font-size: 1.2rem;
+        gap: 0.2rem;
+      }
+
+      p:last-of-type {
+        font-size: 0.9rem;
+        color: grey;
+      }
+    }
+
+    &:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 2rem;
+
+      @media only screen and (max-width: 1100px) {
+        display: none;
+      }
+
+      @media only screen and (max-width: 950px) {
+        grid-area: b;
+        display: flex;
+        border-right: none;
+      }
+
+      @media only screen and (max-width: 500px) {
+        gap: 0.3rem;
+      }
+
+      .row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50px 1fr auto;
+        gap: 1rem;
+
+        button {
+          color: $acc-clr;
+          font-size: 0.9rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: grey;
+        }
+
+        &:first-of-type .barFill {
+          background-color: green;
+        }
+
+        &:nth-of-type(2) .barFill {
+          background-color: greenyellow;
+        }
+
+        &:nth-of-type(3) .barFill {
+          background-color: orange;
+        }
+
+        &:nth-of-type(4) .barFill {
+          background-color: rgb(235, 95, 45);
+        }
+
+        &:nth-of-type(5) .barFill {
+          background-color: red;
+        }
+
+        .bar {
+          width: 100%;
+          border: 1px solid $border-clr;
+          border-radius: 10px;
+          overflow: hidden;
+
+          .barFill {
+            width: 50%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      @media only screen and (max-width: 950px) {
+        grid-area: c;
+      }
+
+      .icon {
+        font-size: 1.5rem;
+        color: green;
+      }
+
+      p:first-of-type {
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      p:last-of-type {
+        color: grey;
+        font-size: 0.9rem;
+      }
+    }
+
+    &:nth-of-type(4) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border-right: none;
+
+      @media only screen and (max-width: 950px) {
+        grid-area: d;
+      }
+
+      .icon {
+        font-size: 1.5rem;
+        color: $acc-clr;
+      }
+
+      p:first-of-type {
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      p:last-of-type {
+        color: grey;
+        font-size: 0.9rem;
+      }
+    }
+
+    &:nth-of-type(5) {
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.7rem;
+
+      @media only screen and (max-width: 950px) {
+        display: none;
+      }
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      .rating {
+        display: flex;
+        gap: 0.2rem;
+
+        button {
+          font-size: 1.5rem;
+          color: grey;
+        }
+      }
+
+      & > button {
+        width: max-content;
+        padding: 0.5rem 1rem;
+        background-color: $acc-clr;
+        font-size: 0.9rem;
+        color: $text-clr-white;
+        border-radius: 3px;
+      }
+    }
+  }
+}

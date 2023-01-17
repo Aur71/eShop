@@ -1,0 +1,10 @@
+@import '../../variables.scss';
+
+.reviewsContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
