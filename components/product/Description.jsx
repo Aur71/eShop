@@ -41,6 +41,7 @@ const Description = () => {
 
   return (
     <div
+      id='desc'
       className={`${styles.desc} ${showMore && styles.active}`}
       ref={descRef}
     >

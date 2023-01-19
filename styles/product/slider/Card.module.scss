@@ -1,1 +1,158 @@
 @import '../../variables.scss';
+
+$tag-color: rgb(119, 189, 218);
+$number-of-reviews-clr: grey;
+$star-clr: orange;
+$price-clr: rgb(218, 13, 13);
+
+.card {
+  flex: none;
+  min-width: 264px;
+  max-width: 264px;
+  height: 100%;
+  border-radius: 3px;
+  position: relative;
+  background-color: $white;
+  display: grid;
+  grid-template-rows: 245px 1fr;
+  gap: 0.5rem;
+
+  @media only screen and (max-width: 500px) {
+    min-width: 250px;
+    max-width: 250px;
+  }
+
+  @media only screen and (max-width: 300px) {
+    min-width: 240px;
+    max-width: 240px;
+  }
+
+  .favoriteBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    z-index: 5;
+
+    &:hover {
+      color: $acc-clr;
+    }
+  }
+
+  .imgContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .tag {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $tag-color;
+        text-transform: capitalize;
+        color: $white;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .textContainer {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      a {
+        color: $text-clr-black;
+      }
+    }
+
+    .rating {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+
+      .star {
+        color: $star-clr;
+      }
+
+      span {
+        font-size: 0.9rem;
+
+        &:last-of-type {
+          color: $number-of-reviews-clr;
+        }
+      }
+    }
+
+    .priceContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.2rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p:first-of-type {
+          color: grey;
+          font-size: 0.7rem;
+          font-weight: 500;
+        }
+
+        p:last-of-type {
+          font-weight: 600;
+          color: $price-clr;
+          font-size: 1.1rem;
+        }
+      }
+
+      .buyBtn {
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        background-color: $acc-clr;
+        background: -webkit-linear-gradient(left, blue, $acc-clr);
+        background: linear-gradient(90deg, blue, $acc-clr);
+        color: $white;
+        transition: transform 300ms;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

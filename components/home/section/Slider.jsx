@@ -32,9 +32,6 @@ const Slider = () => {
     cardsContainerRef.current.style.scrollBehavior = 'auto';
   };
 
-  //
-  // NEED TO ADD PAGINATION
-  //
   return (
     <div className={styles.slider} ref={sliderRef}>
       <button className={styles.leftBtn} onClick={slideLeft}>

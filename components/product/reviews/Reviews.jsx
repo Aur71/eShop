@@ -7,7 +7,7 @@ import Pagination from './Pagination';
 
 const Reviews = () => {
   return (
-    <div className={styles.reviews}>
+    <div className={styles.reviews} id='reviews'>
       <div className={styles.center}>
         <div className={styles.header}>
           <h2>Reviews (28 reviews)</h2>

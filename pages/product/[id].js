@@ -8,6 +8,7 @@ import Navigation from '../../components/product/Navigation';
 import Description from '../../components/product/Description';
 import Specifications from '../../components/product/Specifications';
 import Reviews from '../../components/product/reviews/Reviews';
+import Section from '../../components/home/section/Section';
 
 const Product = () => {
   return (

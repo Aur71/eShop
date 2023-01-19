@@ -36,7 +36,7 @@ const Specifications = () => {
   };
 
   return (
-    <div className={styles.specs} ref={specsRef}>
+    <div className={styles.specs} ref={specsRef} id='specs'>
       <div
         className={`${styles.overlay}  ${showMore && styles.inactive}`}
         ref={overlayRef}

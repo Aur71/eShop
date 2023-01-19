@@ -5,7 +5,7 @@ import { useState } from 'react';
 // COMPONENTS
 import Slider from './Slider';
 
-const Section = () => {
+const Section = ({ title }) => {
   const [scrollPoints, setScrollPoints] = useState([]);
 
   return (
