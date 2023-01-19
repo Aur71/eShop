@@ -1,0 +1,143 @@
+@import '../variables.scss';
+
+.product {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: #e4f1f9;
+
+  display: grid;
+  grid-template-rows: auto 100px;
+  gap: 1rem;
+
+  .info {
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border-radius: 5px;
+    padding: 1rem 0.5rem;
+
+    display: grid;
+    grid-template-columns: 150px 350px 1fr 1fr;
+    gap: 1rem;
+
+    .imgContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+      }
+    }
+
+    .titleContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+
+      h2 {
+        font-size: 1rem;
+
+        a {
+          color: $text-clr-black;
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .quantityContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      .quantity {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        border: 1px solid $text-clr-black;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        position: relative;
+
+        &.active {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        span {
+          padding: 0 0.2rem;
+        }
+
+        .icon {
+          font-size: 1.2rem;
+        }
+      }
+
+      .options {
+        position: absolute;
+        left: -1px;
+        top: calc(100% - 1px);
+        width: calc(100% + 2px);
+        height: 103px;
+        border: 1px solid $text-clr-black;
+        background-color: $white;
+        border-top: none;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
+        button {
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          padding: 0.2rem;
+
+          &:hover {
+            background-color: rgb(211, 211, 211);
+          }
+        }
+      }
+    }
+
+    .actionsContainer {
+      width: 100%;
+      height: 100%;
+
+      border: 1px solid red;
+    }
+  }
+
+  .price {
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+  }
+}

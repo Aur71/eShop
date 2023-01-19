@@ -1,0 +1,55 @@
+@import '../variables.scss';
+
+.emptyCart {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  h1 {
+    font-size: clamp(1.3rem, 4vw, 2.5rem);
+    font-weight: 600;
+  }
+
+  a {
+    background-color: $acc-clr;
+    padding: 10px 15px;
+    color: $text-clr-white;
+    border-radius: 3px;
+  }
+}
+
+.cart {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+
+  h1 {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-weight: 500;
+    padding: 0 0.5rem;
+
+    @media only screen and (max-width: 1450px) {
+      max-width: 1100px;
+    }
+  }
+
+  .center {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+
+    @media only screen and (max-width: 1450px) {
+      max-width: 1100px;
+    }
+  }
+}
