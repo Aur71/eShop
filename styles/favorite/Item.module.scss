@@ -1,0 +1,212 @@
+@import '../variables.scss';
+
+.item {
+  width: 100%;
+  min-height: 200px;
+  border-bottom: 1px solid $border-clr;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 1rem;
+  position: relative;
+
+  @media only screen and (max-width: 750px) {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+      'a b'
+      'a c';
+    gap: 0 1rem;
+    padding: 1rem 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'a'
+      'b '
+      'c';
+    gap: 0 0.5rem;
+  }
+
+  .imgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 750px) {
+      grid-area: a;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .titleContainer {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media only screen and (max-width: 750px) {
+      grid-area: b;
+    }
+
+    @media only screen and (max-width: 750px) {
+      padding: 0;
+    }
+
+    h2 {
+      font-size: clamp(0.9rem, 1.1rem, 1.3vw);
+      font-weight: 500;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+
+      .icon {
+        color: $star-clr;
+        font-size: clamp(0.8rem, 1vw, 1rem);
+      }
+
+      span {
+        margin-left: 0.3rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .infoContainer {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.4rem;
+    padding-left: clamp(0rem, 1vw, 4rem);
+
+    @media only screen and (max-width: 600px) {
+      gap: 0.2rem;
+    }
+
+    @media only screen and (max-width: 750px) {
+      grid-area: c;
+      align-items: flex-start;
+      padding: 0;
+    }
+
+    p:first-of-type {
+      font-size: 0.9rem;
+      color: green;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    p:nth-of-type(2) {
+      font-size: 0.9rem;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    p:nth-of-type(3) {
+      font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+      color: $acc-clr-2;
+      font-weight: 600;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1rem;
+      }
+    }
+
+    .btnsContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 0.5rem;
+
+      @media only screen and (max-width: 750px) {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    button:first-of-type {
+      background-color: $acc-clr-3;
+      color: $text-clr-white;
+
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 5px;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+
+      span {
+        padding: 0.5rem;
+        height: 100%;
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:first-of-type {
+          background-color: $acc-clr-2;
+          border-bottom-right-radius: 50%;
+        }
+      }
+    }
+
+    button:last-of-type {
+      color: $text-clr-black;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid $acc-clr;
+      border-radius: 5px;
+      font-size: 0.9rem;
+
+      @media only screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        border: none;
+        font-size: 1.2rem;
+      }
+
+      span {
+        padding: 0.5rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: 750px) {
+          padding: 0;
+        }
+
+        &:last-of-type {
+          @media only screen and (max-width: 750px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

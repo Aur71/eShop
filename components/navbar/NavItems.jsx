@@ -36,12 +36,12 @@ const NavItems = () => {
 
       {/* ICONS */}
       <div className={styles.icons}>
-        <Link href='#' className={styles.account}>
+        <Link href='/account/1' className={styles.account}>
           <CiUser />
           <span>my account</span>
         </Link>
 
-        <Link href='#' className={styles.favorite}>
+        <Link href='/favorite' className={styles.favorite}>
           <CiHeart />
           <span>favorite</span>
         </Link>
