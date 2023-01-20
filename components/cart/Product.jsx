@@ -66,10 +66,29 @@ const Product = () => {
           </div>
         </div>
 
-        <div className={styles.actionsContainer}></div>
+        <div className={styles.actionsContainer}>
+          <p>23.99$</p>
+
+          <div className={styles.btnContainer}>
+            <button>favorite</button>
+            <button>remove</button>
+          </div>
+        </div>
       </div>
 
-      <div className={styles.price}></div>
+      <div className={styles.price}>
+        <div className={styles.container}>
+          <p>
+            Product cost: <span>23.99$</span>
+          </p>
+          <p>
+            Delivery and processing cost: <span>0$</span>
+          </p>
+          <p>
+            Subtotal: <span>23.99$</span>
+          </p>
+        </div>
+      </div>
     </article>
   );
 };
