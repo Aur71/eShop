@@ -1,6 +1,7 @@
 import styles from '../styles/layout/menu/Menu.module.scss';
 // HOOKS
 import { useGlobalContext } from '../context/context';
+import { useRouter } from 'next/router';
 
 // COMPONENTS
 import MegaMenu from '../components/menu/MegaMenu';
@@ -9,6 +10,8 @@ import MegaMenu from '../components/menu/MegaMenu';
 import { menuData } from '../data/menuData';
 
 const Menu = () => {
+  const router = useRouter();
+
   const { showMenu, showMegaMenu, setShowMegaMenu, setMegaMenuItems } =
     useGlobalContext();
 
@@ -26,6 +29,8 @@ const Menu = () => {
     <div
       className={`${styles.menu} ${showMenu && styles.active} ${
         showMegaMenu && styles.acitveMegaMenu
+      } ${router.pathname === '/register' && 'disabled'} ${
+        router.pathname === '/login' && 'disabled'
       }`}
       onMouseLeave={handleMouseLeave}
     >

@@ -1,0 +1,200 @@
+@import '../variables.scss';
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .login {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .logoContainer {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+
+    form {
+      width: 400px;
+      height: auto;
+      background-color: $white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      padding: 2rem;
+
+      @media only screen and (max-width: 450px) {
+        width: 300px;
+      }
+
+      @media only screen and (max-width: 330px) {
+        width: 100%;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding-left: 12px;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid $border-clr;
+        border-radius: 20px;
+        padding: 9px 12px;
+        font-size: 1rem;
+        font-family: $font-1;
+        transition: border 300ms;
+        margin-bottom: 15px;
+
+        &:focus {
+          border-color: $acc-clr;
+        }
+      }
+
+      .submitBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 9px;
+        background-color: $acc-clr;
+        color: $white;
+        border-radius: 20px;
+        font-size: 1.1rem;
+        transition: background-color 300ms;
+
+        &:hover {
+          background-color: $acc-clr-3;
+        }
+      }
+
+      .line {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        place-items: center;
+        gap: 15px;
+        margin: 2rem 0;
+
+        span:first-of-type {
+          width: 100%;
+          height: 2px;
+
+          background: #0082e6;
+          background: -webkit-linear-gradient(
+            left,
+            #ff1d25 5%,
+            #a0328c 35%,
+            #7040a4 45%,
+            #4359c7 55%,
+            #0082e6 70%
+          );
+          background: linear-gradient(
+            to right,
+            #ff1d25 5%,
+            #a0328c 35%,
+            #7040a4 45%,
+            #4359c7 55%,
+            #0082e6 70%
+          );
+        }
+
+        span:last-of-type {
+          width: 100%;
+          height: 2px;
+
+          background: #0082e6;
+          background: -webkit-linear-gradient(
+            left,
+            #0082e6 30%,
+            #4359c7 45%,
+            #7040a4 55%,
+            #a0328c 65%,
+            #ff1d25 7%
+          );
+          background: linear-gradient(
+            to right,
+            #0082e6 30%,
+            #4359c7 45%,
+            #7040a4 55%,
+            #a0328c 65%,
+            #ff1d25 7%
+          );
+        }
+
+        span:nth-of-type(2) {
+          font-size: 1rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .googleBtn {
+        background-color: #cf553d;
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto 1fr;
+        place-items: center;
+        padding: 9px 12px;
+        color: $text-clr-white;
+        border-radius: 20px;
+        transition: background-color 300ms;
+
+        &:hover {
+          background-color: $acc-clr-2;
+        }
+
+        span {
+          display: flex;
+          font-size: 1rem;
+          padding: 0;
+
+          &:first-of-type {
+            padding-right: 8px;
+            border-right: 1px solid rgba(255, 255, 255, 0.288);
+          }
+
+          &:last-of-type {
+            padding-right: 8px;
+          }
+        }
+      }
+    }
+
+    .registerLink {
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: $acc-clr;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
