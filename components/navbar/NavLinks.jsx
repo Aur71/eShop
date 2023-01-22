@@ -25,11 +25,11 @@ const NavLinks = () => {
         </li>
 
         <li>
-          <Link href='#'>faq</Link>
+          <Link href='/faq'>faq</Link>
         </li>
 
         <li>
-          <Link href='#'>support</Link>
+          <Link href='/support'>support</Link>
         </li>
       </ul>
     </div>
