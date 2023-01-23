@@ -1,4 +1,6 @@
 import styles from '../../styles/account/components/MyOrders.module.scss';
+// HOOKS
+import { useState } from 'react';
 
 // MEDIA
 import { AiOutlineDown } from 'react-icons/ai';
@@ -17,8 +19,8 @@ const MyOrders = () => {
               all orders <AiOutlineDown className={styles.icon} />
             </span>
 
-            <div className={styles.dropDown}>
-              <button className={styles.active}>all orders</button>
+            <div className={`${styles.dropDown}`}>
+              <button>all orders</button>
               <button>active orders</button>
               <button>canceled orders</button>
             </div>
@@ -34,7 +36,7 @@ const MyOrders = () => {
             </span>
 
             <div className={styles.dropDown}>
-              <button className={styles.active}>last month</button>
+              <button>last month</button>
               <button>last 3 months</button>
               <button>last 6 months</button>
               <button>last year</button>
@@ -44,6 +46,13 @@ const MyOrders = () => {
         </div>
 
         <input type='text' placeholder='Product name' />
+      </div>
+
+      <div className={styles.orders}>
+        <article className={styles.order}>order</article>
+        <article className={styles.order}>order</article>
+        <article className={styles.order}>order</article>
+        <article className={styles.order}>order</article>
       </div>
     </div>
   );

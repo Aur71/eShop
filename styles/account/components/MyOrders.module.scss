@@ -76,7 +76,7 @@
           }
         }
 
-        & > div {
+        .dropDown {
           position: absolute;
           left: -1px;
           top: calc(100% - 1px);
@@ -97,6 +97,11 @@
           button {
             width: 100%;
             padding: 5px;
+
+            &:hover {
+              background-color: $acc-clr;
+              color: $text-clr-white;
+            }
 
             @media only screen and (max-width: 1000px) {
               font-size: 0.8rem;
@@ -131,5 +136,21 @@
         margin-left: 0;
       }
     }
+  }
+
+  .orders {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .order {
+    width: 100%;
+    background-color: $white;
+    padding: 1rem;
+    border: 3px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 }
