@@ -2,6 +2,9 @@ import styles from '../../styles/account/components/MyOrders.module.scss';
 // HOOKS
 import { useState } from 'react';
 
+// TOOLS
+import Link from 'next/link';
+
 // MEDIA
 import { AiOutlineDown } from 'react-icons/ai';
 
@@ -49,10 +52,25 @@ const MyOrders = () => {
       </div>
 
       <div className={styles.orders}>
-        <article className={styles.order}>order</article>
-        <article className={styles.order}>order</article>
-        <article className={styles.order}>order</article>
-        <article className={styles.order}>order</article>
+        <article className={styles.order}>
+          <div className={styles.orderNumber}>
+            <h3>
+              <Link href='#'>Order no. 292427516</Link>
+            </h3>
+
+            <button>order details</button>
+          </div>
+
+          <div className={styles.line}></div>
+
+          <div className={styles.orderInfo}>
+            <p>Ordered on: December 19, 2022, 11:41</p>
+            <p>Total: 31.39$</p>
+            <p>
+              Status: <span>delivered</span>
+            </p>
+          </div>
+        </article>
       </div>
     </div>
   );
