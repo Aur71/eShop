@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+.sidebar {
+  width: 100%;
+  height: max-content;
+  background-color: $white;
+  padding: 5px 15px;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  ul {
+    width: 100%;
+    height: auto;
+
+    li button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid $border-clr;
+      color: $acc-clr;
+
+      font-weight: 500;
+      text-transform: capitalize;
+
+      .icon {
+        display: none;
+      }
+
+      &.active {
+        color: grey;
+
+        .icon {
+          display: flex;
+        }
+      }
+    }
+
+    li:last-of-type button {
+      border-bottom: none;
+    }
+  }
+}
