@@ -9,6 +9,10 @@
   grid-template-columns: 250px 1fr;
   gap: 20px;
 
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+
   .wrapper {
     width: 100%;
     height: auto;

@@ -54,6 +54,11 @@
       grid-template-columns: auto 1fr;
     }
 
+    @media only screen and (max-width: 450px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
     .imgContainer {
       width: max-content;
       position: relative;
@@ -88,11 +93,23 @@
         justify-content: center;
         gap: 20px;
 
+        @media only screen and (max-width: 850px) {
+          padding-right: 1.5rem;
+        }
+
+        @media only screen and (max-width: 450px) {
+          padding: 1.5rem;
+        }
+
         li {
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 300px;
+
+          @media only screen and (max-width: 850px) {
+            width: 100%;
+          }
 
           span {
             width: 100%;
