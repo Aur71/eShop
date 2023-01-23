@@ -2,6 +2,117 @@
 
 .myAccount {
   width: 100%;
-  height: 500px;
-  border: 1px solid blue;
+  height: auto;
+}
+
+// ACCOUNT DATA BELOW
+
+.accountData {
+  width: 100%;
+  min-height: 250px;
+  background-color: $white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  h2 {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .changeData {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $acc-clr;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 15px;
+    border-top: 1px solid $border-clr;
+    transition: background-color 300ms;
+
+    &:hover {
+      background-color: $acc-clr;
+      color: $text-clr-white;
+    }
+  }
+
+  .data {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    place-items: center;
+
+    @media only screen and (max-width: 1050px) {
+      grid-template-columns: auto 1fr;
+    }
+
+    .imgContainer {
+      width: max-content;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2rem;
+
+      input[type='file'] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+
+      img {
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .dataContainer {
+      width: 100%;
+      height: 100%;
+
+      ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 300px;
+
+          span {
+            width: 100%;
+
+            &:first-of-type {
+              color: grey;
+            }
+          }
+        }
+      }
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      text-align: center;
+
+      @media only screen and (max-width: 1050px) {
+        display: none;
+      }
+    }
+  }
 }
