@@ -7,10 +7,34 @@ import MyOrders from './MyOrders';
 import OrderDetails from './OrderDetails';
 
 const Orders = () => {
+  const [showDetails, setShowDetails] = useState(false);
+  const [orderStatus, setOrderStatus] = useState('all orders');
+  const [orderTime, setOrderTime] = useState('all orders');
+  const [productName, setProductName] = useState('');
+
+  const openDetails = () => {
+    setShowDetails(true);
+  };
+
+  const closeDetails = () => {
+    setShowDetails(false);
+  };
+
   return (
     <section className={styles.orders}>
-      <MyOrders />
-      <OrderDetails />
+      {showDetails ? (
+        <OrderDetails closeDetails={closeDetails} />
+      ) : (
+        <MyOrders
+          openDetails={openDetails}
+          orderStatus={orderStatus}
+          setOrderStatus={setOrderStatus}
+          orderTime={orderTime}
+          setOrderTime={setOrderTime}
+          productName={productName}
+          setProductName={setProductName}
+        />
+      )}
     </section>
   );
 };
