@@ -1,6 +1,4 @@
-import styles from '../../styles/account/components/MyOrders.module.scss';
-// HOOKS
-import { useState } from 'react';
+import styles from '../../../styles/account/orders/MyOrders.module.scss';
 
 // TOOLS
 import Link from 'next/link';

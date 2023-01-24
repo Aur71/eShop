@@ -1,4 +1,4 @@
-import styles from '../../styles/account/components/Sidebar.module.scss';
+import styles from '../../styles/account/Sidebar.module.scss';
 
 // DATA
 import { data } from '../../data/accountSidebar';

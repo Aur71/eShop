@@ -1,7 +1,13 @@
 import styles from '../styles/layout/Overlay.module.scss';
+// HOOKS
+import { useGlobalContext } from '../context/context';
 
 const Overlay = () => {
-  return <div className={styles.overlay}></div>;
+  const { showOverlay } = useGlobalContext();
+
+  return (
+    <div className={`${styles.overlay}  ${showOverlay && styles.active}`}></div>
+  );
 };
 
 export default Overlay;

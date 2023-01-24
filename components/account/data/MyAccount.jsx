@@ -1,12 +1,16 @@
-import styles from '../../styles/account/components/MyAccount.module.scss';
+import styles from '../../../styles/account/data/MyAccount.module.scss';
+// HOOKS
+import { useAccountContext } from '../../../context/accountContext';
 
 // TOOLS
 import Image from 'next/image';
 
 // MEDIA
-import user from '../../public/user.png';
+import user from '../../../public/user.png';
 
 const MyAccount = () => {
+  const { openDataForm } = useAccountContext();
+
   return (
     <div className={styles.myAccount}>
       <div className={styles.accountData}>
@@ -43,7 +47,9 @@ const MyAccount = () => {
           </h3>
         </div>
 
-        <button className={styles.changeData}>change</button>
+        <button className={styles.changeData} onClick={openDataForm}>
+          change
+        </button>
       </div>
     </div>
   );

@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const [showOverlay, setShowOverlay] = useState(false);
+
   const route = useRouter();
   const [showMenu, setShowMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(null);
@@ -47,6 +49,9 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
+        showOverlay,
+        setShowOverlay,
+
         showMenu,
         setShowMenu,
         handleMenu,
