@@ -1,6 +1,7 @@
 import styles from '../../../styles/account/orders/Product.module.scss';
 // HOOKS
 import { useState, useEffect } from 'react';
+import { useAccountContext } from '../../../context/accountContext';
 
 // TOOKS
 import Image from 'next/image';
@@ -13,6 +14,7 @@ import { BsStarFill } from 'react-icons/bs';
 const Product = () => {
   const [starCount, setStarCount] = useState(0);
   const [rating, setRating] = useState('Add a review');
+  const { handleReview } = useAccountContext();
 
   useEffect(() => {
     if (starCount === 0) {
@@ -31,7 +33,7 @@ const Product = () => {
       setRating('Good');
     }
     if (starCount === 5) {
-      setRating('Exellent');
+      setRating('Excellent');
     }
   }, [starCount]);
 
@@ -51,6 +53,7 @@ const Product = () => {
           <button
             onMouseOver={() => setStarCount(1)}
             onMouseLeave={() => setStarCount(0)}
+            onClick={() => handleReview(1)}
             className={`${starCount >= 1 && styles.active}`}
           >
             <BsStarFill />
@@ -59,6 +62,7 @@ const Product = () => {
           <button
             onMouseOver={() => setStarCount(2)}
             onMouseLeave={() => setStarCount(0)}
+            onClick={() => handleReview(2)}
             className={`${starCount >= 2 && styles.active}`}
           >
             <BsStarFill />
@@ -67,6 +71,7 @@ const Product = () => {
           <button
             onMouseOver={() => setStarCount(3)}
             onMouseLeave={() => setStarCount(0)}
+            onClick={() => handleReview(3)}
             className={`${starCount >= 3 && styles.active}`}
           >
             <BsStarFill />
@@ -75,6 +80,7 @@ const Product = () => {
           <button
             onMouseOver={() => setStarCount(4)}
             onMouseLeave={() => setStarCount(0)}
+            onClick={() => handleReview(4)}
             className={`${starCount >= 4 && styles.active}`}
           >
             <BsStarFill />
@@ -83,6 +89,7 @@ const Product = () => {
           <button
             onMouseOver={() => setStarCount(5)}
             onMouseLeave={() => setStarCount(0)}
+            onClick={() => handleReview(5)}
             className={`${starCount >= 5 && styles.active}`}
           >
             <BsStarFill />

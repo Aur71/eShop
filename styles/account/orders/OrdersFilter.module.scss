@@ -1,0 +1,125 @@
+@import '../../variables.scss';
+
+.filters {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media only screen and (max-width: 1000px) {
+    gap: 10px;
+  }
+
+  .options {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    & > span {
+      font-size: 0.9rem;
+      font-weight: 600;
+
+      @media only screen and (max-width: 850px) {
+        display: none;
+      }
+    }
+
+    & > div {
+      min-width: 150px;
+      display: flex;
+
+      align-items: center;
+      padding: 5px;
+      background-color: $main-clr;
+      border: 1px solid $text-clr-black;
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+
+      @media only screen and (max-width: 1000px) {
+        min-width: 120px;
+      }
+
+      & > span {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 1000px) {
+          font-size: 0.9rem;
+        }
+
+        .icon {
+          font-size: 14px;
+
+          @media only screen and (max-width: 1000px) {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .dropDown {
+        position: absolute;
+        left: -1px;
+        top: calc(100% - 1px);
+        width: calc(100% + 2px);
+        background-color: $main-clr;
+        border: 1px solid $text-clr-black;
+        border-top: none;
+
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
+        button {
+          width: 100%;
+          padding: 5px;
+
+          &:hover {
+            background-color: $acc-clr;
+            color: $text-clr-white;
+          }
+
+          @media only screen and (max-width: 1000px) {
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+
+          &.active {
+            background-color: $acc-clr;
+            color: $text-clr-white;
+          }
+        }
+      }
+    }
+  }
+
+  input {
+    margin-left: auto;
+    font-family: $font-1;
+    outline: none;
+    padding: 5px 15px;
+    background-color: $main-clr;
+    color: $text-clr-black;
+    border: 1px solid $black;
+    border-radius: 3px;
+    font-size: 0.95rem;
+
+    @media only screen and (max-width: 1000px) {
+      width: 150px;
+    }
+
+    @media only screen and (max-width: 500px) {
+      margin-left: 0;
+    }
+  }
+}

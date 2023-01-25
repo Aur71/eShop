@@ -11,6 +11,7 @@ import MyAccount from '../../components/account/data/MyAccount';
 import DataForm from '../../components/account/data/DataForm';
 
 import Orders from '../../components/account/orders/Orders';
+import ReviewForm from '../../components/account/orders/ReviewForm';
 
 import Returns from '../../components/account/returns/Returns';
 import ReturnForm from '../../components/account/returns/ReturnForm';
@@ -70,6 +71,7 @@ const account = () => {
           setActiveWindow={setActiveWindow}
         />
         <DataForm />
+        <ReviewForm />
 
         {windows.map((window) => {
           if (activeWindow === window.name) {
