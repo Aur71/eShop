@@ -1,0 +1,24 @@
+@import '../../../variables.scss';
+
+.myOrders {
+  width: 100%;
+  background-color: $acc-clr-4;
+  border-radius: 3px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .orders {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

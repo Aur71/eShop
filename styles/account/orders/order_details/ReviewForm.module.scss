@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import '../../../variables.scss';
 
 .reviewForm {
   position: fixed;
@@ -12,6 +12,10 @@
 
   &.active {
     display: block;
+  }
+
+  @media only screen and (max-width: 750px) {
+    width: 100%;
   }
 
   .center {
@@ -71,6 +75,10 @@
       flex-direction: column;
       gap: 2rem;
 
+      @media only screen and (max-width: 450px) {
+        padding: 1rem;
+      }
+
       .rating {
         display: flex;
         align-items: center;
@@ -88,6 +96,10 @@
         p {
           margin-left: 10px;
           font-weight: 600;
+
+          @media only screen and (max-width: 350px) {
+            display: none;
+          }
         }
       }
 

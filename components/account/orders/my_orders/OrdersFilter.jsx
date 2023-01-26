@@ -1,9 +1,10 @@
-import styles from '../../../styles/account/orders/OrdersFilter.module.scss';
+import styles from '../../../../styles/account/orders/my_orders/OrdersFilter.module.scss';
 // HOOKS
 import { useState } from 'react';
 
 // DATA
-import { statusFilter, fromFilter } from '../../../data/ordersFilter';
+import { statusFilter, fromFilter } from '../../../../data/ordersFilter';
+
 // MEDIA
 import { AiOutlineDown } from 'react-icons/ai';
 

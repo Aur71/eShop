@@ -1,34 +1,53 @@
-import styles from '../../../styles/account/orders/ReviewForm.module.scss';
+import styles from '../../../../styles/account/orders/order_details/ReviewForm.module.scss';
 // HOOKS
-import { useAccountContext } from '../../../context/accountContext';
-import { useState } from 'react';
+import { useAccountContext } from '../../../../context/accountContext';
+import { useState, useEffect } from 'react';
 
 // TOOLS
 import Image from 'next/image';
 import Link from 'next/link';
 
+// DATA
+import { rating } from '../../../../data/rating';
+
 // MEDIA
 import { AiOutlineClose, AiOutlineCloudUpload } from 'react-icons/ai';
-import { BsStarFill } from 'react-icons/bs';
-import img from '../../../public/temporary/temp.jpg';
+import img from '../../../../public/temporary/temp.jpg';
 
 const ReviewForm = () => {
-  const {
-    showReviewForm,
-    closeReviewForm,
-    starCount,
-    setStarCount,
-    rating,
-    setRating,
-  } = useAccountContext();
+  const [stars, setStars] = useState(0);
+  const [tag, setTag] = useState('Rate the product');
+  const { showReviewForm, closeReviewForm, starCount } = useAccountContext();
 
-  const handleRating = (s, r) => {
-    setStarCount(s);
-    setRating(r);
-  };
+  useEffect(() => {
+    setStars(starCount);
+    if (starCount === 0) {
+      setTag('Rate the product');
+    }
+    if (starCount === 1) {
+      setTag('Very bad');
+    }
+    if (starCount === 2) {
+      setTag('Bad');
+    }
+    if (starCount === 3) {
+      setTag('Decent');
+    }
+    if (starCount === 4) {
+      setTag('Good');
+    }
+    if (starCount === 5) {
+      setTag('Excellent');
+    }
+  }, [starCount]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleStars = (num, name) => {
+    setStars(num);
+    setTag(name);
+
+    if (num === 0) {
+      setTag('Rate the product');
+    }
   };
 
   return (
@@ -51,45 +70,22 @@ const ReviewForm = () => {
 
         <div className={styles.body}>
           <div className={styles.rating}>
-            <button
-              onClick={() => handleRating(1, 'Very bad')}
-              className={`${starCount >= 1 && styles.active}`}
-            >
-              <BsStarFill />
-            </button>
+            {rating.map((item) => {
+              return (
+                <button
+                  key={item.id}
+                  className={`${item.stars <= stars && styles.active}`}
+                  onClick={() => handleStars(item.stars, item.name)}
+                >
+                  {item.icon}
+                </button>
+              );
+            })}
 
-            <button
-              onClick={() => handleRating(2, 'Bad')}
-              className={`${starCount >= 2 && styles.active}`}
-            >
-              <BsStarFill />
-            </button>
-
-            <button
-              onClick={() => handleRating(3, 'Decent')}
-              className={`${starCount >= 3 && styles.active}`}
-            >
-              <BsStarFill />
-            </button>
-
-            <button
-              onClick={() => handleRating(4, 'Good')}
-              className={`${starCount >= 4 && styles.active}`}
-            >
-              <BsStarFill />
-            </button>
-
-            <button
-              onClick={() => handleRating(5, 'Excellent')}
-              className={`${starCount >= 5 && styles.active}`}
-            >
-              <BsStarFill />
-            </button>
-
-            <p>{rating}</p>
+            <p>{tag}</p>
           </div>
 
-          <form onSubmit={handleSubmit}>
+          <form>
             <label htmlFor='title'>Review title:</label>
             <input
               type='text'

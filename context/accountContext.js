@@ -10,7 +10,6 @@ const AppProvider = ({ children }) => {
   const [showDataForm, setShowDataForm] = useState(false);
   const [showReviewForm, setShowReviewForm] = useState(false);
   const [starCount, setStarCount] = useState(0);
-  const [rating, setRating] = useState('Add a review');
 
   //   OPENING DATA FORM
   const openDataForm = () => {
@@ -36,28 +35,7 @@ const AppProvider = ({ children }) => {
     setShowOverlay(true);
     setShowReviewForm(true);
     document.querySelector('body').style.overflowY = 'hidden';
-
     setStarCount(stars);
-
-    if (stars === 0 || stars === '') {
-      setRating('Rate the product');
-    }
-
-    if (stars === 1) {
-      setRating('Very bad');
-    }
-    if (stars === 2) {
-      setRating('Bad');
-    }
-    if (stars === 3) {
-      setRating('Decent');
-    }
-    if (stars === 4) {
-      setRating('Good');
-    }
-    if (stars === 5) {
-      setRating('Excellent');
-    }
   };
 
   return (
@@ -71,8 +49,6 @@ const AppProvider = ({ children }) => {
         handleReview,
         starCount,
         setStarCount,
-        setRating,
-        rating,
       }}
     >
       {children}

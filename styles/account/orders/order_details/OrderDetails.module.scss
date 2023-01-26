@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import '../../../variables.scss';
 
 .orderDetails {
   width: 100%;
@@ -6,6 +6,10 @@
   background-color: $acc-clr-4;
   border-radius: 3px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 10px;
+  }
 
   .header {
     display: flex;
@@ -84,12 +88,21 @@
         font-weight: 500;
       }
     }
+  }
 
-    .products {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 1rem;
+  .products {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    background-color: $white;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1rem;
+
+    @media only screen and (max-width: 600px) {
+      padding: 10px;
     }
   }
 }

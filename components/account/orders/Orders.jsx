@@ -3,8 +3,8 @@ import styles from '../../../styles/account/orders/Orders.module.scss';
 import { useState } from 'react';
 
 // COMPONENTS
-import MyOrders from './MyOrders';
-import OrderDetails from './OrderDetails';
+import MyOrders from './my_orders/MyOrders';
+import OrderDetails from './order_details/OrderDetails';
 
 const Orders = () => {
   const [showDetails, setShowDetails] = useState(false);

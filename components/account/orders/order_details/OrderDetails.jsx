@@ -1,10 +1,4 @@
-import styles from '../../../styles/account/orders/OrderDetails.module.scss';
-// HOOKS
-import { useState, useEffect } from 'react';
-
-// TOOLS
-import Image from 'next/image';
-import Link from 'next/link';
+import styles from '../../../../styles/account/orders/order_details/OrderDetails.module.scss';
 
 // COMPONENTS
 import Product from './Product';
@@ -39,13 +33,13 @@ const OrderDetails = ({ closeDetails }) => {
           <span>Total:</span>
           <span>31,39$</span>
         </p>
+      </div>
 
-        <div className={styles.products}>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-        </div>
+      <div className={styles.products}>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
       </div>
     </section>
   );
