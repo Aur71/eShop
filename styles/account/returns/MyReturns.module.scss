@@ -1,1 +1,63 @@
 @import '../../variables.scss';
+
+.myReturns {
+  width: 100%;
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid $border-clr;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    button {
+      font-size: 2rem;
+      color: $acc-clr;
+    }
+  }
+
+  .returnList {
+    width: 100%;
+    padding: 1rem;
+
+    .noReturns {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 4rem 0rem;
+
+      h3,
+      p {
+        text-align: center;
+        max-width: 500px;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 0.9rem;
+
+        span {
+          color: $acc-clr;
+          cursor: pointer;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
