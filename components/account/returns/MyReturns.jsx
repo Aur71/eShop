@@ -6,13 +6,13 @@ import Return from './Return';
 // MEDIA
 import { HiDocumentPlus } from 'react-icons/hi2';
 
-const MyReturns = ({ getReturn }) => {
+const MyReturns = ({ getReturn, openReturnForm }) => {
   return (
     <div className={styles.myReturns}>
       <div className={styles.header}>
         <h2>My returns</h2>
 
-        <button>
+        <button onClick={openReturnForm}>
           <HiDocumentPlus />
         </button>
       </div>
@@ -31,12 +31,9 @@ const MyReturns = ({ getReturn }) => {
         ) : null}
 
         <Return getReturn={getReturn} />
-        <Return />
-        <Return />
-        <Return />
-        <Return />
-        <Return />
-        <Return />
+        <Return getReturn={getReturn} />
+        <Return getReturn={getReturn} />
+        <Return getReturn={getReturn} />
       </ul>
     </div>
   );

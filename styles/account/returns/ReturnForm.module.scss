@@ -1,1 +1,44 @@
 @import '../../variables.scss';
+
+.returnForm {
+  width: 100%;
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid $border-clr;
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: grey;
+    }
+  }
+
+  .noProducts {
+    width: 100%;
+    height: auto;
+    padding: 100px 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      max-width: 500px;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+}

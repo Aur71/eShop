@@ -5,26 +5,45 @@ import { useState } from 'react';
 // COMPONENTS
 import MyReturns from './MyReturns';
 import ReturnDetails from './ReturnDetails';
+import ReturnForm from './ReturnForm';
 
 const Returns = () => {
   const [showDetails, setShowDetails] = useState(false);
   const [returnDetails, setReturnDetails] = useState({});
+  const [showReturnForm, setShowReturnForm] = useState(false);
 
   const getReturn = () => {
     // GET THE RETURN THAN DISPLAY IT
-    setReturnDetails('');
+    setReturnDetails({});
     setShowDetails(true);
   };
+
+  const closeShowDetails = () => {
+    setShowDetails(false);
+    setReturnDetails({});
+  };
+
+  const openReturnForm = () => {
+    setShowReturnForm(true);
+  };
+
+  const closeReturnForm = () => {
+    setShowReturnForm(false);
+  };
+
+  if (showReturnForm) {
+    return <ReturnForm closeReturnForm={closeReturnForm} />;
+  }
 
   return (
     <section>
       {showDetails ? (
         <ReturnDetails
           returnDetails={returnDetails}
-          setShowDetails={setShowDetails}
+          closeShowDetails={closeShowDetails}
         />
       ) : (
-        <MyReturns getReturn={getReturn} />
+        <MyReturns getReturn={getReturn} openReturnForm={openReturnForm} />
       )}
     </section>
   );
