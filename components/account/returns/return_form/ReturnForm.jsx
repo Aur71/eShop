@@ -1,4 +1,7 @@
-import styles from '../../../styles/account/returns/ReturnForm.module.scss';
+import styles from '../../../../styles/account/returns/return_form/ReturnForm.module.scss';
+
+// COMPONENTS
+import ProgressBar from './ProgressBar';
 
 // MEDIA
 import { AiOutlineClose } from 'react-icons/ai';
@@ -20,9 +23,6 @@ const ReturnForm = ({ closeReturnForm }) => {
           <h2>You currently do not have any products eligible for return.</h2>
         </div>
       ) : null}
-
-      {/* IF THERE ARE PRODUCTS */}
-      {1 === 1 ? <div className={styles.products}></div> : null}
     </section>
   );
 };

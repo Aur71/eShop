@@ -14,7 +14,6 @@ import Orders from '../../components/account/orders/Orders';
 import ReviewForm from '../../components/account/orders/order_details/ReviewForm';
 
 import Returns from '../../components/account/returns/Returns';
-import ReturnForm from '../../components/account/returns/ReturnForm';
 
 import Guarantess from '../../components/account/guarantess/Guarantess';
 
